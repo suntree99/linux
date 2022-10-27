@@ -3,18 +3,18 @@
 ## Konfigurasi Firewall dengan iptables
 
 1. Memeriksa versi iptables
-	```linux
+	```terminal
 	sudo iptables -V
 	```
 
 2. Jika iptables belum terinstall, lakukan instalasi
-	```linux
+	```terminal
 	sudo apt-get update
 	sudo apt-get install iptables
 	```
 
 3. Memeriksa status konfigurasi
-	```linux
+	```terminal
 	sudo iptables -L -v
 	```
 	Catatan: 
@@ -26,7 +26,7 @@
 	ipconfig
 	```
 	* Linux
-	```linux
+	```terminal
 	ifconfig
 	```
 
@@ -36,12 +36,12 @@
 	ping <inet eth0>
 	```
 	* Linux
-	```linux
+	```ubuntu
 	ping <default gateway>
 	```
 
 6. Memblokir komunikasi jaringan
-	```linux
+	```ubuntu
 	sudo iptables -A OUTPUT -p icmp --icmp-type echo-request -j DROP
 	```
 	Catatan:
@@ -50,12 +50,12 @@
 	* -p icmp : Menentukan protokol mana yang akan diblokir, dalam hal ini adalah ICMP (protokol untuk melakukan ping).
 	* --icmp-type echo-request : Memilih tipe ICMP yang dimaksud, yakni echo-request.
 	* -j DROP : Menentukan aksi yang akan dilakukan, dalam kasus ini berarti DROP.
-	```linux
+	```ubuntu
 	sudo iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 	```
 
 7. Mereset semua rule
-	```linux
+	```ubuntu
 	sudo iptables -F
 	```
 
