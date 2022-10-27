@@ -1,6 +1,6 @@
-## Linux
+# Linux
 
-# Konfigurasu Firewaal dengan iptables
+## Konfigurasi Firewall dengan iptables
 
 1. Memeriksa versi iptables
 ```
@@ -17,7 +17,8 @@ sudo apt-get install iptables
 ```
 sudo iptables -L -v
 ```
-Catatan: Perintah -L berfungsi untuk melihat list (daftar) semua aturan yang ada, sedangkan -v untuk menampilkan list tersebut secara detail.
+Catatan: 
+* Perintah -L berfungsi untuk melihat list (daftar) semua aturan yang ada, sedangkan -v untuk menampilkan list tersebut secara detail.
 
 4. Memblokir komunikasi jaringan
 ```
