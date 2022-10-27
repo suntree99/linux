@@ -17,7 +17,7 @@
 	```console
 	sudo iptables -L -v
 	```
-		* Perintah -L berfungsi untuk melihat list (daftar) semua aturan yang ada, sedangkan -v untuk menampilkan list tersebut secara detail.
+	* Perintah -L berfungsi untuk melihat list (daftar) semua aturan yang ada, sedangkan -v untuk menampilkan list tersebut secara detail.
 
 4. Mengecek ipconfig
 	* Windows
@@ -46,12 +46,12 @@
 	```console
 	sudo iptables -A INPUT -p icmp --icmp-type echo-request -j DROP
 	```
-		* sudo : Langkah untuk mendapatkan akses superuser atau administrator, biasanya akan meminta password.
-		* -A OUTPUT : Rule atau aturan akan ditambahkan ke chain OUTPUT (yang mengelola akses keluar).
-		* -A INPUT : Rule atau aturan akan ditambahkan ke chain INPUT (yang mengelola akses masuk).
-		* -p icmp : Menentukan protokol mana yang akan diblokir, dalam hal ini adalah ICMP (protokol untuk melakukan ping).
-		* --icmp-type echo-request : Memilih tipe ICMP yang dimaksud, yakni echo-request.
-		* -j DROP : Menentukan aksi yang akan dilakukan, dalam kasus ini berarti DROP.
+	* sudo : Langkah untuk mendapatkan akses superuser atau administrator, biasanya akan meminta password.
+	* -A OUTPUT : Rule atau aturan akan ditambahkan ke chain OUTPUT (yang mengelola akses keluar).
+	* -A INPUT : Rule atau aturan akan ditambahkan ke chain INPUT (yang mengelola akses masuk).
+	* -p icmp : Menentukan protokol mana yang akan diblokir, dalam hal ini adalah ICMP (protokol untuk melakukan ping).
+	* --icmp-type echo-request : Memilih tipe ICMP yang dimaksud, yakni echo-request.
+	* -j DROP : Menentukan aksi yang akan dilakukan, dalam kasus ini berarti DROP.
 
 7. Mereset semua rule
 	```console
