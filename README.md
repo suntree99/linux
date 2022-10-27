@@ -56,7 +56,7 @@
 	* -j DROP : Menentukan aksi yang akan dilakukan, dalam kasus ini berarti DROP.
 
 7. Mereset semua rule
-	```cmd
+	```console
 	sudo iptables -F
 	```
 
