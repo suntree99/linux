@@ -82,4 +82,8 @@ Untuk `menyoroti` bungkus text dengan backtick 1x
 Isi
 ```
 
+git add .
+git commit -m 'Update README.md'
+git push
+
 Update README.md
