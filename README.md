@@ -26,7 +26,7 @@
 	ipconfig
 	```
 	* Linux
-	```terminal
+	```
 	ifconfig
 	```
 
@@ -36,12 +36,12 @@
 	ping <inet eth0>
 	```
 	* Linux
-	```ubuntu
+	```power
 	ping <default gateway>
 	```
 
 6. Memblokir komunikasi jaringan
-	```sudo
+	```console
 	sudo iptables -A OUTPUT -p icmp --icmp-type echo-request -j DROP
 	```
 	Catatan:
