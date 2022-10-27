@@ -1,5 +1,27 @@
 # Linux
 
+## Web Server
+
+1. Menginstall NVM (Node Version Manajer) pada Ubuntu
+	```console
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
+	```
+
+2. Menginstall Node.js versi tertentu
+	```console
+	nvm install v14.15.4
+	```
+
+3. Menginstall beberapa dependencies pada project (pastikan berada dalam folder project)
+	```console
+	npm install
+	```
+
+4. Menjalankan web server
+	```console
+	npm run start
+	```
+
 ## Konfigurasi Firewall dengan iptables
 
 1. Memeriksa versi iptables
