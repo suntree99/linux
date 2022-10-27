@@ -41,7 +41,7 @@
 	```
 
 6. Memblokir komunikasi jaringan
-	```ubuntu
+	```sudo
 	sudo iptables -A OUTPUT -p icmp --icmp-type echo-request -j DROP
 	```
 	Catatan:
@@ -55,7 +55,7 @@
 	```
 
 7. Mereset semua rule
-	```ubuntu
+	```powershell
 	sudo iptables -F
 	```
 
