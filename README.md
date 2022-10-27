@@ -1,19 +1,34 @@
-## Package Regexp
-```go
-import "regexp"
-import "fmt"
+## Linux
 
-func main() {
+# Konfigurasu Firewaal dengan iptables
 
-	var regex *regexp.Regexp = regexp.MustCompile("e([a-z])a")
-	fmt.Println(regex.MatchString("eka")) // true
-	fmt.Println(regex.MatchString("eta")) // true
-	fmt.Println(regex.MatchString("eDa")) // false
-
-	search := regex.FindAllString("eka eko eda eta eya eki", -1)
-	fmt.Println(search) // [eka eda eta eya]
-}
+1. Memeriksa versi iptables
 ```
+sudo iptables -V
+```
+
+2. Jika iptables belum terinstall, lakukan instalasi
+```
+sudo apt-get update
+sudo apt-get install iptables
+```
+
+3. Memeriksa status konfigurasi
+```
+sudo iptables -L -v
+```
+Catatan: Perintah -L berfungsi untuk melihat list (daftar) semua aturan yang ada, sedangkan -v untuk menampilkan list tersebut secara detail.
+
+4. Memblokir komunikasi jaringan
+```
+sudo iptables -A OUTPUT -p icmp --icmp-type echo-request -j DROP
+```
+Catatan:
+* sudo : Langkah untuk mendapatkan akses superuser atau administrator, biasanya akan meminta password.
+* -A OUTPUT : Rule atau aturan akan ditambahkan ke chain OUTPUT (yang mengelola akses keluar).
+* -p icmp : Menentukan protokol mana yang akan diblokir, dalam hal ini adalah ICMP (protokol untuk melakukan ping).
+* --icmp-type echo-request : Memilih tipe ICMP yang dimaksud, yakni echo-request.
+* -j DROP : Menentukan aksi yang akan dilakukan, dalam kasus ini berarti DROP.
 
 ##
 ##
